@@ -1,2 +1,2 @@
 # Shopping-Basket-Extractor
-extracts data from the basket HTML of the ASDA website to JSON. Stores category, name, price, unit_price, and quantity.
+Extracts data from the basket page HTML of the ASDA website to JSON. Stores name, price, unit_price, and quantity. 
