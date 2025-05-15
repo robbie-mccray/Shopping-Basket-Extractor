@@ -34,11 +34,11 @@ SHOPPING-BASKET-EXTRACTOR/
 ## 🚀 How to Use
 
 1. Go to the trolley/basket page of the order you want to extract and right click on the page and click inspect.
-2. ![tutorialimage1](https://github.com/user-attachments/assets/2cbbb4b8-2f52-4418-b072-4c77532da4ec)\n
+2. ![tutorialimage1](https://github.com/user-attachments/assets/2cbbb4b8-2f52-4418-b072-4c77532da4ec)
    As shown in the picture above go to the top <html> element and copy the inner HTML.
-3. Place copied html into a html file.
-4. Place it inside the `basket_file/` folder.
-5. Run the script:
+4. Place copied html into a html file.
+5. Place it inside the `basket_file/` folder.
+6. Run the script:
 
 ```bash
 python main.py
