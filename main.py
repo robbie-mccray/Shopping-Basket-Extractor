@@ -3,6 +3,7 @@ import os
 import json
 import re
 from datetime import datetime
+import html
 
 # Paths
 BASKET_DIR = "basket_file"
@@ -38,9 +39,6 @@ if date_label:
 products = []
 for item in soup.find_all("div", {"data-auto-id": "item"}):
     try:
-        category_tag = item.find_previous("div", class_="item-heading__name")
-        category = category_tag.get_text(strip=True) if category_tag else "Unknown"
-
         name_tag = item.find("h3", class_="ingredient__title")
         name = name_tag.get_text(strip=True) if name_tag else "Unnamed Product"
 
@@ -54,12 +52,11 @@ for item in soup.find_all("div", {"data-auto-id": "item"}):
         quantity = quantity_input["value"] if quantity_input else "1"
 
         products.append({
-            "category": category,
-            "name": name,
-            "price": price,
-            "unit_price": unit_price,
-            "quantity": quantity
-        })
+        "name": ' '.join(name.split()).replace('\xa0', ' '),
+        "price": html.unescape(price.strip()),
+        "unit_price": ' '.join(unit_price.split()).replace('\xa0', ' '),
+        "quantity": quantity.strip()
+    })
     except Exception as e:
         print(f"⚠️ Error parsing item: {e}")
 
@@ -68,6 +65,6 @@ output_filename = f"basket_{delivery_date}.json"
 output_path = os.path.join(OUTPUT_DIR, output_filename)
 
 with open(output_path, "w", encoding="utf-8") as f:
-    json.dump(products, f, indent=2)
+    json.dump(products, f, indent=2, ensure_ascii=False)
 
 print(f"✅ {len(products)} products saved to {output_path}")
