@@ -35,7 +35,7 @@ SHOPPING-BASKET-EXTRACTOR/
 
 1. Go to the trolley/basket page of the order you want to extract and right-click on the page, then click Inspect.
 
-2. As shown in the picture below, go to the body element and then the div with the id 'root' and copy the Inner HTML: ![image](https://github.com/user-attachments/assets/fcee32c1-8557-42e0-ba94-118b2a93b766)
+2. As shown in the pictures below, go to the body element and then the div with the id 'root' and copy the Inner HTML: ![image](https://github.com/user-attachments/assets/fcee32c1-8557-42e0-ba94-118b2a93b766)
    ![image](https://github.com/user-attachments/assets/07ebde75-9569-4ea3-af5d-6f09eb951509)
 
 
