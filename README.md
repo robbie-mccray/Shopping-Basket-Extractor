@@ -1,4 +1,4 @@
-# 🛒 Shopping-Basket-Extractor
+# 🛒 Shopping-Basket-Extractor (Copilot test)
 
 This tool extracts structured data from the basket page HTML of the [ASDA](https://groceries.asda.com) website and saves it as a JSON file. It's useful for creating shopping lists, budgeting, or meal planning based on your current basket.
 
